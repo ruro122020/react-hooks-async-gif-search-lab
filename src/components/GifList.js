@@ -1,9 +1,13 @@
 import React from 'react'
 
 const GifList = ({ gifs }) => {
-
     return (
-        <div></div>
+        <ul>
+            {gifs.map(gifObj =>
+                <li key={gifObj.id}>
+                    <img src={gifObj.images.original.url} />
+                </li>)}
+        </ul>
     )
 }
 
